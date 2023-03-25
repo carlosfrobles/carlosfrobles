@@ -1,0 +1,276 @@
+* {
+    background: #33D9FF;
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 40px 0;
+    background: 33D9FF;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(10, auto);
+
+    grid-template-areas: "nav nav nav"
+                        "header header header";
+}
+
+.contenedor nav {
+    background: black;
+    min-height: 70px;
+    grid-area: nav;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 20px;
+    flex-wrap: wrap;
+    /*position: fixed;
+    top: 0;*/
+}
+
+.titlenav {
+    color: white;
+    background-color: black;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.navbuttons {
+    background: black;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 20px;
+}
+
+div .buttonnav {
+    min-width: 100px;
+    color: white;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+    border: 0;
+}
+
+div .buttonnav:hover {
+    background: rgb(136, 194, 202);
+}
+
+.pleacesearch {
+    background: black;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+    border-radius: 20px;
+}
+
+div .buttondivinnav {
+    min-width: 100px;
+    margin: 5px;
+    color: black;
+    background: rgb(136, 194, 202);
+    border-radius: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+    border: 0;
+}
+
+div .buttondivinnav:active {
+    background: black;
+    color: rgb(136, 194, 202);
+}
+
+div input {
+    background: rgb(136, 194, 202);
+    border-radius: 10px;
+    border: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+div input::placeholder {
+    background: rgb(136, 194, 202);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.contenedor header {
+        grid-area: header;
+}
+
+@media screen and (max-width: 768px){
+    .contenedor {
+        grid-template-areas: "nav nav nav"
+                        "header header header"
+    }
+
+    .contenedor nav {
+        min-height: 200px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .navbuttons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .pleacesearch {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+}
+
+/*body {
+            
+}
+
+* {
+    background: #33D9FF;
+}
+
+.container {
+    background: #33D9FF;
+    width: 90%;
+    height: 95%;
+    display: flex;
+}
+
+nav {
+    width: 96.75vw;
+    height: 8vh;
+    display: flex;
+    background: black;
+    margin: 10px;
+    justify-content: space-around;
+    align-items: baseline;
+    top: 0;
+    z-index: 5;
+    border-radius: 10px;
+    position: fixed;
+}
+
+.titlenav {
+    width: 20%;
+    height: 40%;
+    font-size: 120%;
+    color: white;
+    background-color: black;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.navbuttons {
+    width: 400px;
+    height: 30px;
+    display: flex;
+    background: black;
+    justify-content: space-around;
+    align-items: center;
+}
+
+div .buttonnav {
+    width: 100px;
+    height: 30px;
+    color: white;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+    border: 0;
+}
+
+div .buttonnav:hover {
+    background: rgb(136, 194, 202);
+}
+
+.pleacesearch {
+    width: 300px;
+    background: black;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+}
+
+div .buttondivinnav {
+    color: black;
+    background: rgb(136, 194, 202);
+    border-radius: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+    border: 0;
+}
+
+div .buttondivinnav:active {
+    background: black;
+    color: rgb(136, 194, 202);
+}
+
+div input {
+    width: 180px;
+    height: 20px;
+    background: rgb(136, 194, 202);
+    border-radius: 10px;
+    border: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+div input::placeholder {
+    background: rgb(136, 194, 202);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.espacionavheader {
+    width: 1610px;
+    height: 75px;
+}
+
+.container {
+    width: 96.75vw;
+    height: 49vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgb(136, 194, 202);
+    margin: 10px;
+    z-index: 5;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.imgheader {
+    background: rgb(136, 194, 202);
+    width: 100px;
+    height: 140px;
+    padding: 0px;
+    margin: 20px;
+}
+
+.firsttitleheader {
+    background: rgb(136, 194, 202);
+    width: 36%;
+    height: 5%;
+    margin: 20px;
+}
+
+.secondtitleheader {
+    background: rgb(136, 194, 202);
+    width: 43%;
+    height: 5%;
+    margin: 20px;
+}*/
+
