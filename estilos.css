@@ -1,5 +1,5 @@
 body     {
-    background: #33D9FF;
+    background: #D5F5E3;
     margin: 0;
     padding: 0;
 }
@@ -33,7 +33,7 @@ body     {
 }
 
 .titlenav {
-    color: white;
+    color: #66BB6A;
     background-color: black;
     font-family: 'Courier New', Courier, monospace;
     border-radius: 20px;
@@ -59,10 +59,12 @@ div .buttonnav {
     font-family: 'Courier New', Courier, monospace;
     font-size: large;
     border: 0;
+    text-decoration: none;
 }
 
 div .buttonnav:hover {
-    background: rgb(136, 194, 202);
+    background: #D5F5E3;
+    color: black;
 }
 
 .pleacesearch {
@@ -77,7 +79,7 @@ div .buttondivinnav {
     min-width: 100px;
     margin: 5px;
     color: black;
-    background: rgb(136, 194, 202);
+    background: #D5F5E3;
     border-radius: 10px;
     font-family: 'Courier New', Courier, monospace;
     font-size: large;
@@ -86,11 +88,11 @@ div .buttondivinnav {
 
 div .buttondivinnav:active {
     background: black;
-    color: rgb(136, 194, 202);
+    color: white;
 }
 
 div input {
-    background: rgb(136, 194, 202);
+    background: #D5F5E3;
     border-radius: 10px;
     border: 0;
     padding-left: 10px;
@@ -98,24 +100,33 @@ div input {
 }
 
 div input::placeholder {
-    background: rgb(136, 194, 202);
+    background: #D5F5E3;
     font-family: 'Courier New', Courier, monospace;
 }
 
 .contenedor header {
-        background: #539bac;
-        grid-area: header;
-        min-height: 635px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        border-radius: 20px;
+    grid-area: header;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 header img {
     width: 90px;
     height: auto;
+}
+
+header h1 {
+    color: #66BB6A;
+    font-family: 'Quicksand', sans-ser;
+}
+
+header h2 {
+    color: #66BB6A;
+    font-family: 'Quicksand', sans-ser;
+    margin: 0px;
 }
 
 .contenedor .aboutme {
@@ -133,6 +144,8 @@ header img {
     border: dotted 2px #000000;
     border-radius: 20px;
     margin: 10px;
+    padding: 15px;
+    box-sizing: border-box;
 }
 
 .cointenedoraboutdis img {
@@ -162,6 +175,7 @@ header img {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 10px;
 }
 
 .lenguage img {
@@ -198,10 +212,16 @@ header img {
     .contenedor header {
         padding: 10px;
     }
+
     .cointenedoraboutdis {
         display: flex;
         flex-wrap: wrap;
         padding: 10px;
         box-sizing: border-box;
+    }
+
+    .aboutme-skills .icon-skills {
+        display: flex;
+        justify-content: center;
     }
 }
